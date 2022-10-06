@@ -6,7 +6,6 @@ const cors = require("cors");
 const moment = require("moment");
 const express = require("express");
 const nodemailer = require("nodemailer");
-const { users } = require("./database/users");
 const { config } = require("dotenv");
 config();
 require("./db/mongodb");
@@ -90,53 +89,6 @@ app.post("/upload", upload.single("record"), (req, res) => {
     res.status(400).json({
       err,
       URL: null,
-    });
-  }
-});
-
-app.post("/login", (req, res) => {
-  try {
-    const { username, password } = req.body;
-    // Searching email on database
-    const isUsernameExists = users.find((user) => user.username === username);
-    if (!isUsernameExists) {
-      const message = "Email not found :c";
-      console.log(message);
-      return res.status(200).json({
-        message,
-        err: true,
-        token: null,
-        isAuth: false,
-      });
-    }
-    // Searching the password on database
-    const isPasswordCorrect = users.find((user) => user.password === password);
-    if (!isPasswordCorrect) {
-      const message = "Invalid password :c";
-      console.log(message);
-      return res.status(200).json({
-        message,
-        err: true,
-        token: null,
-        isAuth: false,
-      });
-    }
-    // Authentication succesfully
-    const message = "Authenticated c:";
-    console.log(`User: ${username} -> ${message}`);
-    res.status(200).json({
-      message,
-      err: false,
-      token: null,
-      isAuth: true,
-    });
-  } catch (err) {
-    console.log(err);
-    res.status(200).json({
-      err: true,
-      token: null,
-      isAuth: false,
-      message: err?.message,
     });
   }
 });

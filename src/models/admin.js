@@ -11,9 +11,9 @@ const AdminScheme = new Schema(
       type: String,
       required: true,
     },
-    group_id: {
-      type: Number,
-      required: true,
+    isAdmin: {
+      type: Boolean,
+      default: true,
     },
   },
   {

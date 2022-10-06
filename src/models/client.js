@@ -15,9 +15,13 @@ const ClientScheme = new Schema(
       type: Number,
       required: true,
     },
-    grupo_id: {
-      type: Number,
+    group_id: {
+      type: String,
       required: true,
+    },
+    isAdmin: {
+      type: Boolean,
+      default: false,
     },
   },
   {

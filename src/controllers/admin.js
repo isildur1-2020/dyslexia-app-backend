@@ -1,9 +1,23 @@
-const { Admin } = require("../db/mongodb");
+const { Admin, Client } = require("../db/mongodb");
 
 const createAdmin = async (req, res) => {
   try {
-    // req.body -> { username: s, password: s, group_id: n }
-    const newAdmin = new Admin(req.body);
+    const { username, password } = req.body;
+    const isExistsOnClient = await Client.exists({ username });
+    if (isExistsOnClient)
+      return res.status(200).json({
+        err: false,
+        adminCreated: null,
+        message: "Username already in use!",
+      });
+    const isExists = await Admin.exists({ username });
+    if (isExists)
+      return res.status(200).json({
+        err: false,
+        adminCreated: null,
+        message: "Username already in use!",
+      });
+    const newAdmin = new Admin({ username, password });
     const adminCreated = await newAdmin.save();
     const message = "Admin created succesfully!";
     console.log(message);
@@ -24,8 +38,8 @@ const createAdmin = async (req, res) => {
 
 const deleteAdmin = async (req, res) => {
   try {
-    // req.body -> { username: s }
-    const userDeleted = await Admin.deleteOne(req.body);
+    const { username } = req.body;
+    const userDeleted = await Admin.deleteOne({ username });
     const message = "Admin deleted successfully!";
     console.log(message);
     res.status(200).json({
