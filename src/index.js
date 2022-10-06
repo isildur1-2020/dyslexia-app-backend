@@ -6,9 +6,11 @@ const cors = require("cors");
 const moment = require("moment");
 const express = require("express");
 const nodemailer = require("nodemailer");
-const { users } = require("./src/database/users");
+const { users } = require("./database/users");
 const { config } = require("dotenv");
 config();
+require("./db/mongodb");
+const apiRouter = require("./routers/api");
 
 const app = express();
 // SETTINGS
@@ -137,6 +139,13 @@ app.post("/login", (req, res) => {
       message: err?.message,
     });
   }
+});
+
+app.use("/api", apiRouter);
+
+app.use((err, req, res, next) => {
+  console.log(err);
+  next();
 });
 
 app.listen(app.get("PORT"), () => {
