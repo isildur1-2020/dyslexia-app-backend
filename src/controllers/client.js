@@ -38,7 +38,7 @@ const createClient = async (req, res) => {
 
 const deleteClient = async (req, res) => {
   try {
-    const { username } = req.body;
+    const { username } = req.params;
     const userDeleted = await Client.deleteOne({ username });
     const message = "Client deleted successfully!";
     console.log(message);
@@ -61,12 +61,20 @@ const findClientsByGroup = async (req, res) => {
   try {
     const { group_id } = req.params;
     const clientsFound = await Client.find({ group_id }).exec();
+    const newClientsFound = clientsFound?.map((el) => {
+      const { username, tests, createdAt } = el;
+      return {
+        tests,
+        username,
+        id: createdAt,
+      };
+    });
     const message = "Clients found successfully!";
     console.log(message);
     res.status(200).json({
       message,
       err: false,
-      clientsFound,
+      clientsFound: newClientsFound,
     });
   } catch (err) {
     console.log(err);

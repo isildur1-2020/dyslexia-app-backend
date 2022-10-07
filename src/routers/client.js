@@ -8,7 +8,7 @@ const {
 } = require("../controllers/client");
 
 router.post("/", createClient);
-router.delete("/", deleteClient);
+router.delete("/:username", deleteClient);
 router.get("/:group_id", findClientsByGroup);
 router.put("/:username", updateClientTests);
 

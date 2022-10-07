@@ -7,9 +7,9 @@ const signinController = async (req, res) => {
     // IS ADMIN ?
     const adminFound = await Admin.findOne({ username, password });
     if (adminFound !== null) {
-      const message = username + "Authenticated c:";
+      const message = username + " Authenticated c:";
       console.log(message);
-      const token = JWTsign({ username, password, isAdmin: true });
+      const token = JWTsign({ username, isAdmin: true });
       return res.status(200).json({
         token,
         message,
@@ -19,9 +19,9 @@ const signinController = async (req, res) => {
     // IS CLIENT
     const clientFound = await Client.findOne({ username, password });
     if (clientFound !== null) {
-      const message = username + "Authenticated c:";
+      const message = username + " Authenticated c:";
       console.log(message);
-      const token = JWTsign({ username, password, isAdmin: false });
+      const token = JWTsign({ username, isAdmin: false });
       return res.status(200).json({
         token,
         message,
