@@ -14,7 +14,8 @@ const JWTverify = (token) => {
     const decoded = jwt.verify(token, process.env.JWT_SECRET);
     return decoded;
   } catch (err) {
-    console.log(err);
+    console.log(err.message);
+    return undefined;
   }
 };
 

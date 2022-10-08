@@ -7,6 +7,7 @@ const moment = require("moment");
 const express = require("express");
 const nodemailer = require("nodemailer");
 const { config } = require("dotenv");
+const { isUser } = require("./middlewares/jwt");
 config();
 require("./db/mongodb");
 const apiRouter = require("./routers/api");
@@ -30,9 +31,8 @@ const storage = multer.diskStorage({
 
 var upload = multer({ storage });
 
-app.post("/data", (req, res) => {
+app.post("/data", isUser, (req, res) => {
   const { userData, videoLink, screenLink } = req.body;
-  const { age, bloodType, dateOfBirth, gender, name, nationality } = userData;
 
   var transporter = nodemailer.createTransport({
     service: "Gmail",
@@ -46,30 +46,44 @@ app.post("/data", (req, res) => {
     from: process.env.EMAIL_USER,
     to: process.env.EMAIL_DESTINY,
     subject: "Dyslexia App",
-    text: `
-    AGE: ${age}
-    NAME: ${name}
-    GENDER: ${gender}
-    BLOOD TYPE: ${bloodType}
-    NATIONALITY: ${nationality}
-    DATE OF BIRTH: ${dateOfBirth}
-    LINK CAMERA RECORD ${videoLink}
-    LINK SCREEN RECORD ${screenLink}
+    html: `
+    <h4>Dyslexia App Test</h4>
+    <b>AGE:</b> <em>${userData?.age}</em>
+    <br/>
+    <b>NAME:</b> <em>${userData?.name}</em>
+    <br/>
+    <b>GENDER:</b> <em>${userData?.gender}</em>
+    <br/>
+    <b>BLOOD TYPE:</b> <em>${userData?.bloodType}</em>
+    <br/>
+    <b>NATIONALITY:</b> <em>${userData?.nationality}</em>
+    <br/>
+    <b>DATE OF BIRTH:</b> <em>${userData?.dateOfBirth}</em>
+    <br/>
+    <b>LINK CAMERA RECORD:</b> <em>${videoLink}</em>
+    <br/>
+    <b>LINK SCREEN RECORD:</b> <em>${screenLink}</em>
     `,
   };
 
-  transporter.sendMail(mailOptions, function (error, info) {
-    if (error) {
-      console.log(error);
-      res.send(500, err.message);
+  transporter.sendMail(mailOptions, function (err, info) {
+    if (err) {
+      console.log(err.message);
+      res.status(200).json({
+        err: err.message,
+        message: "Email error",
+      });
     } else {
       console.log("Email sent");
-      res.status(200).jsonp(req.body);
+      res.status(200).json({
+        err: null,
+        message: info,
+      });
     }
   });
 });
 
-app.post("/upload", upload.single("record"), (req, res) => {
+app.post("/upload", isUser, upload.single("record"), (req, res) => {
   try {
     const { mimetype, path } = req.file;
     const extension = mimetype.split("/")?.[1];
@@ -86,7 +100,7 @@ app.post("/upload", upload.single("record"), (req, res) => {
     });
   } catch (err) {
     console.log(err);
-    res.status(400).json({
+    res.status(200).json({
       err,
       URL: null,
     });
