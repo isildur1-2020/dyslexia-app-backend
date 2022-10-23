@@ -26,7 +26,7 @@ const getLanguajes = async (req, res) => {
   }
 };
 
-const createLanguaje = async (req, res) => {
+const createLanguajes = async (req, res) => {
   try {
     const { languaje } = req.params;
     // const isLanguajeExists = await Languaje.findOne({ languaje });
@@ -38,6 +38,19 @@ const createLanguaje = async (req, res) => {
     //     err: true,
     //   });
     // }
+    const langs = [
+      "arabic",
+      "chinese",
+      "english",
+      "french",
+      "german",
+      "italian",
+      "portuguese",
+      "russian",
+      "spanish",
+      "turkish",
+    ];
+
     const {
       loginTitle,
       loginUser,
@@ -75,48 +88,66 @@ const createLanguaje = async (req, res) => {
       sixthQuestionText,
       seventhQuestionTitle,
       seventhQuestionText,
+      audioFirstQuestion,
+      audioSecondQuestion,
+      audioThridQuestion,
+      audioFourthQuestion,
+      audioFifthQuestion,
+      audioSixthQuestion,
+      audioSeventhQuestion,
     } = languajes?.[0];
-    const newLanguaje = await Languaje.create({
-      languaje,
-      loginTitle,
-      loginUser,
-      loginPassword,
-      loginNext,
-      formName,
-      formAge,
-      formDateOfBirth,
-      formNationality,
-      formBloodType,
-      formFemale,
-      formMale,
-      timeTitle,
-      timeMinutesLabel,
-      recordPopupLabel,
-      recordPopupCancelLabel,
-      recordPopupStartLabel,
-      firstQuestionTitle,
-      firstQuestionSubtitle,
-      secondQuestionTitle,
-      secondQuestionOption1,
-      secondQuestionOption2,
-      secondQuestionOption3,
-      secondQuestionOption4,
-      thirdQuestionTitle,
-      thirdQuestionSubtitle,
-      fourthQuestionTitle,
-      fourthQuestionOption1,
-      fourthQuestionOption2,
-      fourthQuestionOption3,
-      fourthQuestionOption4,
-      fifthQuestionTitle,
-      fifthQuestionSubtitle,
-      sixthQuestionTitle,
-      sixthQuestionText,
-      seventhQuestionTitle,
-      seventhQuestionText,
+
+    langs.forEach(async (lang) => {
+      const newLanguaje = await Languaje.create({
+        languaje: lang,
+        loginTitle,
+        loginUser,
+        loginPassword,
+        loginNext,
+        formName,
+        formAge,
+        formDateOfBirth,
+        formNationality,
+        formBloodType,
+        formFemale,
+        formMale,
+        timeTitle,
+        timeMinutesLabel,
+        recordPopupLabel,
+        recordPopupCancelLabel,
+        recordPopupStartLabel,
+        firstQuestionTitle,
+        firstQuestionSubtitle,
+        secondQuestionTitle,
+        secondQuestionOption1,
+        secondQuestionOption2,
+        secondQuestionOption3,
+        secondQuestionOption4,
+        thirdQuestionTitle,
+        thirdQuestionSubtitle,
+        fourthQuestionTitle,
+        fourthQuestionOption1,
+        fourthQuestionOption2,
+        fourthQuestionOption3,
+        fourthQuestionOption4,
+        fifthQuestionTitle,
+        fifthQuestionSubtitle,
+        sixthQuestionTitle,
+        sixthQuestionText,
+        seventhQuestionTitle,
+        seventhQuestionText,
+        audioFirstQuestion,
+        audioSecondQuestion,
+        audioThridQuestion,
+        audioFourthQuestion,
+        audioFifthQuestion,
+        audioSixthQuestion,
+        audioSeventhQuestion,
+      });
+      await newLanguaje.save();
     });
-    await newLanguaje.save();
-    const message = "Languaje created succesfully";
+
+    const message = "Languajes created succesfully";
     console.log(message);
     res.status(200).json({
       err: false,
@@ -166,6 +197,13 @@ const updateLanguaje = async (req, res) => {
       sixthQuestionText,
       seventhQuestionTitle,
       seventhQuestionText,
+      audioFirstQuestion,
+      audioSecondQuestion,
+      audioThridQuestion,
+      audioFourthQuestion,
+      audioFifthQuestion,
+      audioSixthQuestion,
+      audioSeventhQuestion,
     } = req.body;
     const newLanguaje = await Languaje.findOneAndUpdate(
       { languaje },
@@ -199,6 +237,13 @@ const updateLanguaje = async (req, res) => {
         sixthQuestionText,
         seventhQuestionTitle,
         seventhQuestionText,
+        audioFirstQuestion,
+        audioSecondQuestion,
+        audioThridQuestion,
+        audioFourthQuestion,
+        audioFifthQuestion,
+        audioSixthQuestion,
+        audioSeventhQuestion,
       }
     );
     const message = "Languaje updated succesfully";
@@ -220,6 +265,6 @@ const updateLanguaje = async (req, res) => {
 
 module.exports = {
   getLanguajes,
-  createLanguaje,
+  createLanguajes,
   updateLanguaje,
 };

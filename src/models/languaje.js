@@ -161,6 +161,35 @@ const LanguajeScheme = new Schema(
       type: String,
       required: true,
     },
+    // ========================
+    audioFirstQuestion: {
+      type: String,
+      required: true,
+    },
+    audioSecondQuestion: {
+      type: String,
+      required: true,
+    },
+    audioThridQuestion: {
+      type: String,
+      required: true,
+    },
+    audioFourthQuestion: {
+      type: String,
+      required: true,
+    },
+    audioFifthQuestion: {
+      type: String,
+      required: true,
+    },
+    audioSixthQuestion: {
+      type: String,
+      required: true,
+    },
+    audioSeventhQuestion: {
+      type: String,
+      required: true,
+    },
   },
   {
     timestamps: true,

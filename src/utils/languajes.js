@@ -52,6 +52,14 @@ const languajes = [
     seventhQuestionTitle: "Please read the following paragraph",
     seventhQuestionText:
       "The cat is a real dog up down down below above dollar the man went below inside out and we left lo below. when can he go come beyond red green sunshine after leaving home before school monday wednesday the dollar currency can often go come to every country garden forest I believe but cannot sing write go after red green without this reading everbody has one five bellow the wall above the cealing whatever you may want to see go come and play work dollar animals play cat dog go play everbory have fun sad yes red blue orange now later often can dogs plays cats scratch now you can see only one five everyday was coming going in the house window everybody likes candy whenever yellow good I believe this is not for you me everybody has wants can be yes",
+    // ========================
+    audioFirstQuestion: "fire.mp3",
+    audioSecondQuestion: "fire.mp3",
+    audioThridQuestion: "fire.mp3",
+    audioFourthQuestion: "fire.mp3",
+    audioFifthQuestion: "fire.mp3",
+    audioSixthQuestion: "fire.mp3",
+    audioSeventhQuestion: "fire.mp3",
   },
 ];
 
