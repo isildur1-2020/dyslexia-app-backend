@@ -107,47 +107,9 @@ const updateClientTests = async (req, res) => {
   }
 };
 
-const decreaseTests = async (req, res) => {
-  try {
-    const { username } = req.params;
-    const userFound = await Client.findOne({ username });
-    if (!userFound)
-      return res.status(200).json({
-        err: true,
-        message: "User not found",
-        userUpdated: null,
-      });
-    const currentTests = userFound?.tests;
-    if (!currentTests)
-      return res.status(200).json({
-        err: true,
-        message: "Test error",
-        userUpdated: null,
-      });
-    const userUpdated = await Client.updateOne(
-      { username },
-      { tests: currentTests - 1 }
-    );
-    const message = "Test actualizados exitosamente";
-    res.status(200).json({
-      message,
-      err: false,
-      userUpdated,
-    });
-  } catch (err) {
-    console.log(err);
-    return res.status(200).json({
-      err: true,
-      message: "Test error",
-      userUpdated: null,
-    });
-  }
-};
-
 module.exports = {
   createClient,
   deleteClient,
-  decreaseTests,
   updateClientTests,
   findClientsByGroup,
 };

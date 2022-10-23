@@ -21,7 +21,11 @@ const signinController = async (req, res) => {
     if (clientFound !== null) {
       const message = username + " Authenticated c:";
       console.log(message);
-      const token = JWTsign({ username, isAdmin: false });
+      const token = JWTsign({
+        username,
+        isAdmin: false,
+        tests: clientFound?.tests,
+      });
       return res.status(200).json({
         token,
         message,
