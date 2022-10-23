@@ -4,7 +4,7 @@ const adminRouter = require("./admin");
 const clientRouter = require("./client");
 const authRouter = require("./auth");
 const languajeRouter = require("./languaje");
-const audioRouter = require("./audioRouter");
+const audioRouter = require("./audio");
 const { isAdmin } = require("../middlewares/jwt");
 
 router.use("/admin", adminRouter);

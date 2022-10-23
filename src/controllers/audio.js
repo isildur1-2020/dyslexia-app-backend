@@ -1,5 +1,5 @@
-const path = require("path");
 const fs = require("fs");
+const path = require("path");
 
 const audiosOptions = () =>
   new Promise((resolve, reject) => {
@@ -26,6 +26,28 @@ const getAudios = async (req, res) => {
   }
 };
 
+const uploadAudio = (req, res) => {
+  try {
+    const { path, originalname } = req.file;
+    let newPath = path.split("/");
+    newPath.pop();
+    newPath.push(originalname);
+    newPath = newPath.join("/");
+    fs.renameSync(path, newPath);
+    res.status(200).json({
+      err: null,
+      URL: originalname,
+    });
+  } catch (err) {
+    console.log(err);
+    res.status(200).json({
+      err,
+      URL: null,
+    });
+  }
+};
+
 module.exports = {
   getAudios,
+  uploadAudio,
 };
