@@ -31,6 +31,10 @@ const storage = multer.diskStorage({
 
 var upload = multer({ storage });
 
+app.get("/", (req, res) => {
+  res.send("Hello World!");
+});
+
 app.post("/data", isUser, (req, res) => {
   const { userData, videoLink, screenLink } = req.body;
 
