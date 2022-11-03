@@ -6,9 +6,7 @@ const cors = require("cors");
 const moment = require("moment");
 const express = require("express");
 const nodemailer = require("nodemailer");
-const { config } = require("dotenv");
 const { isUser } = require("./middlewares/jwt");
-config();
 require("./db/mongodb");
 const apiRouter = require("./routers/api");
 
