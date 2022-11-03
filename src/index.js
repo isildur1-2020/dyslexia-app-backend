@@ -29,8 +29,9 @@ const storage = multer.diskStorage({
 
 var upload = multer({ storage });
 
-app.get("/", (req, res) => {
+app.get("/api", (req, res, next) => {
   res.send("Hello World!");
+  next();
 });
 
 app.post("/data", isUser, (req, res) => {
