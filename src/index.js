@@ -34,7 +34,7 @@ app.get("/api", (req, res, next) => {
   next();
 });
 
-app.post("/data", isUser, (req, res) => {
+app.post("/api/data", isUser, (req, res) => {
   const { userData, videoLink, screenLink } = req.body;
 
   var transporter = nodemailer.createTransport({
@@ -86,7 +86,7 @@ app.post("/data", isUser, (req, res) => {
   });
 });
 
-app.post("/upload", isUser, upload.single("record"), (req, res) => {
+app.post("/api/upload", isUser, upload.single("record"), (req, res) => {
   try {
     const { mimetype, path } = req.file;
     const extension = mimetype.split("/")?.[1];
