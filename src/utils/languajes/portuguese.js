@@ -1,70 +1,66 @@
-export const portuguese = {
-  // LOGIN
-  user: "User",
-  password: "Password",
-  // FORM
-  name: "Name",
-  age: "Age",
-  birthday: "date of birth",
-  nationality: "Nationality",
-  bloodType: "Blood type",
-  female: "Female",
-  male: "Male",
-  submit: "Próximo",
-  // BORDER COLOR
-  borderColor: "#0048AC",
-  // FIRST PAGE
-  title1: "Por favor copie o seguinte texto",
-  subtitle1: "The cat is real bird",
-  // SECOND PAGE
-  title2: "Por favor, leia o seguinte parágrafo",
-  list2: [
-    "O gato é um cão real acima abaixo acima do dólar o homem foi acima de dentro para fora e nós deixamos a abaixo. Quando ele pode ir além do sol",
-    "verde vermelho depois de sair de casa antes da escola segunda-feira quarta-feira a moeda do dólar muitas vezes pode ir para cada floresta jardim país",
-    "eu acredito, mas não pode cantar escrever ir depois de verde vermelho sem esta leitura todo mundo tem 1 5 abaixo do parede acima do teto tudo o",
-    "que você pode querer ver ir vir e jogar trabalho dólar animais jogar gato cão ir jogar todo mundo tem divertido triste Sim vermelho azul laranja agora mais",
-    "tarde, muitas vezes pode cães jogar gatos arranhar agora você pode ver apenas 1 5 todos os dias estava vindo indo na janela da casa e todos gosta",
-    "de doces sempre amarelo bom eu acredito que isso não é para você me todo mundo tem quer pode ser Sim",
-  ],
-  // THIRD PAGE
-  title3: "Por favor, preencha o relógio",
-  subtitle3: "relógio 5:15",
-  // FOURTH PAGE
-  title4: "Por favor, leia o seguinte parágrafo",
-  list4: [
-    "O gato é um cão real acima abaixo acima do dólar o homem foi acima de dentro para fora e nós deixamos a abaixo. Quando ele pode ir além do sol",
-    "verde vermelho depois de sair de casa antes da escola segunda-feira quarta-feira a moeda do dólar muitas vezes pode ir para cada floresta jardim país",
-    "eu acredito, mas não pode cantar escrever ir depois de verde vermelho sem esta leitura todo mundo tem 1 5 abaixo do parede acima do teto tudo o",
-    "que você pode querer ver ir vir e jogar trabalho dólar animais jogar gato cão ir jogar todo mundo tem divertido triste Sim vermelho azul laranja agora mais",
-    "tarde, muitas vezes pode cães jogar gatos arranhar agora você pode ver apenas 1 5 todos os dias estava vindo indo na janela da casa e todos gosta",
-    "de doces sempre amarelo bom eu acredito que isso não é para você me todo mundo tem quer pode ser Sim",
-  ],
-  color4: "78E2F9",
-  // FIFTH PAGE
-  title5: "Por favor, desenhe um membro da família",
-  subtitle5: "mãe pai irmã ou irmão",
-  // SIXTH PAGE
-  title6: "Por favor, leia o seguinte parágrafo",
-  content6: false,
-  list6: [
-    "O gato é um cão real acima abaixo acima do dólar o homem foi acima de dentro para fora e nós deixamos a abaixo. Quando ele pode ir além do sol",
-    "verde vermelho depois de sair de casa antes da escola segunda-feira quarta-feira a moeda do dólar muitas vezes pode ir para cada floresta jardim país",
-    "eu acredito, mas não pode cantar escrever ir depois de verde vermelho sem esta leitura todo mundo tem 1 5 abaixo do parede acima do teto tudo o",
-    "que você pode querer ver ir vir e jogar trabalho dólar animais jogar gato cão ir jogar todo mundo tem divertido triste Sim vermelho azul laranja agora mais",
-    "tarde, muitas vezes pode cães jogar gatos arranhar agora você pode ver apenas 1 5 todos os dias estava vindo indo na janela da casa e todos gosta",
-    "de doces sempre amarelo bom eu acredito que isso não é para você me todo mundo tem quer pode ser Sim",
-  ],
-  color6: "#6FFB71",
-  // SEVENTH PAGE
-  title7: "",
-  content7: false,
-  list7: [
-    "O gato é um cão real acima abaixo acima do dólar o homem foi acima de dentro para fora e nós deixamos a abaixo. Quando ele pode ir além do sol",
-    "verde vermelho depois de sair de casa antes da escola segunda-feira quarta-feira a moeda do dólar muitas vezes pode ir para cada floresta jardim país",
-    "eu acredito, mas não pode cantar escrever ir depois de verde vermelho sem esta leitura todo mundo tem 1 5 abaixo do parede acima do teto tudo o",
-    "que você pode querer ver ir vir e jogar trabalho dólar animais jogar gato cão ir jogar todo mundo tem divertido triste Sim vermelho azul laranja agora mais",
-    "tarde, muitas vezes pode cães jogar gatos arranhar agora você pode ver apenas 1 5 todos os dias estava vindo indo na janela da casa e todos gosta",
-    "de doces sempre amarelo bom eu acredito que isso não é para você me todo mundo tem quer pode ser Sim",
-  ],
-  color7: "#F25252",
+const portuguese = {
+  languaje: "Português",
+  // ========================
+  loginTitle: "Login",
+  loginUser: "Usuário",
+  loginPassword: "Senha",
+  loginNext: "Próximo",
+  // ========================
+  formName: "Nome",
+  formAge: "Idade",
+  formDateOfBirth: "Data de nascimento",
+  formNationality: "Nacionalidade",
+  formBloodType: "Tipo Sanguíneo",
+  formFemale: "Feminino",
+  formMale: "Masculino",
+  // ========================
+  timeTitle: "Minutos por pergunta",
+  timeMinutesLabel: "Minutos",
+  // ========================
+  recordPopupLabel: "Você quer iniciar a gravação?",
+  recordPopupCancelLabel: "Cancelar",
+  recordPopupStartLabel: "Iniciar",
+  // ========================
+  firstQuestionTitle: "Por favor, copie as seguintes frases abaixo",
+  firstQuestionSubtitle: "O gato é um Pássaro real",
+  // ========================
+  secondQuestionTitle: "Por favor, leia o parágrafo seguinte",
+  secondQuestionOption1: "O pássaro brinca embaixo do gato",
+  secondQuestionOption2:
+    "O cachorro não é árvore tem verde sobre o céu e todos nós gato um pássaro verde amarelo um tem hoje amanhã",
+  secondQuestionOption3:
+    "Depois de hoje quando nós todos temos que ir vir não é verdade",
+  secondQuestionOption4: "Este aqui vem ver meu três todos os dias vai vem",
+  // ========================
+  thirdQuestionTitle: "Por favor, desenho o tempoe",
+  thirdQuestionSubtitle: "5:15",
+  // ========================
+  fourthQuestionTitle: "Por favor, leia o parágrafo seguinte",
+  fourthQuestionOption1: "O pássaro brinca embaixo do gato",
+  fourthQuestionOption2:
+    "O cachorro não é árvore tem verde sobre o céu e todos nós gato um pássaro verde amarelo um tem hoje amanhã",
+  fourthQuestionOption3:
+    "Depois de hoje quando nós todos temos que ir vir não é verdade",
+  fourthQuestionOption4: "Este aqui vem ver meu três todos os dias vai vem",
+  // ========================
+  fifthQuestionTitle: "Por favor, desenhe um membro da família",
+  fifthQuestionSubtitle: "Pai, mãe, irmã ou irmão",
+  // ========================
+  sixthQuestionTitle: "Por favor, leia o parágrafo seguinte",
+  sixthQuestionText:
+    "O gato é um cão real cima baixo baixo abaixo acima dólar o homem foi embaixo dentro fora e nós ficamos abaixo. quando ele pode ir vir além vermelho verde luz do sol depois sair casa antes escola segunda quarta a moeda dólar pode frequentemente ir vir a todos os países jardim floresta eu acredito mas não consigo cantar escrever ir atrás vermelho verde sem esta leitura todo mundo tem um cinco abaixo da parede acima do teto o que quer que você possa querer ver vai vem e brinque trabalhe dólar animais brincar gato cão ir brincar todo mundo se diverte triste sim vermelho azul laranja agora depois frequentemente cães brincam gatos arranham agora você só pode ver um cinco todos os dias estava indo vindo na casa janela todo mundo gosta de doces qualquer hora amarelo bom eu acredito que isto não é para você eu todo mundo quer pode ser sim",
+  // ========================
+  seventhQuestionTitle: "Por favor, leia o parágrafo seguinte",
+  seventhQuestionText:
+    "O gato é um cão real cima baixo baixo abaixo acima dólar o homem foi embaixo dentro fora e nós ficamos abaixo. quando ele pode ir vir além vermelho verde luz do sol depois sair casa antes escola segunda quarta a moeda dólar pode frequentemente ir vir a todos os países jardim floresta eu acredito mas não consigo cantar escrever ir atrás vermelho verde sem esta leitura todo mundo tem um cinco abaixo da parede acima do teto o que quer que você possa querer ver vai vem e brinque trabalhe dólar animais brincar gato cão ir brincar todo mundo se diverte triste sim vermelho azul laranja agora depois frequentemente cães brincam gatos arranham agora você só pode ver um cinco todos os dias estava indo vindo na casa janela todo mundo gosta de doces qualquer hora amarelo bom eu acredito que isto não é para você eu todo mundo quer pode ser sim",
+  // ========================
+  audioFirstQuestion: "fire.mp3",
+  audioSecondQuestion: "fire.mp3",
+  audioThridQuestion: "fire.mp3",
+  audioFourthQuestion: "fire.mp3",
+  audioFifthQuestion: "fire.mp3",
+  audioSixthQuestion: "fire.mp3",
+  audioSeventhQuestion: "fire.mp3",
 };
+
+module.exports = portuguese;

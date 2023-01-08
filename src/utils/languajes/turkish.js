@@ -1,66 +1,66 @@
-export const turkish = {
-  // LOGIN
-  user: "User",
-  password: "Password",
-  // FORM
-  name: "Name",
-  age: "Age",
-  birthday: "date of birth",
-  nationality: "Nationality",
-  bloodType: "Blood type",
-  female: "Female",
-  male: "Male",
-  submit: "Sonraki",
-  // BORDER COLOR
-  borderColor: "#0048AC",
-  // FIRST PAGE
-  title1: "Lütfen aşağıdaki metni kopyalayın",
-  subtitle1: "kedi gerçek bir kuş",
-  // SECOND PAGE
-  title2: "Lütfen aşağıdaki paragrafı okuyun",
-  list2: [
-    "Kedi adam yukarıda aşağı aşağı aşağı aşağı gitti ve biz aşağıda sol dolar yukarıda gerçek bir köpek. Ne zaman o kırmızı yeşil güneş ötesinde okul",
-    "Pazartesi Çarşamba dolar para birimi genellikle her ülke Bahçe ormana ben inanıyorum ama bu okuma olmadan kırmızı yeşil sonra gitmek yazmak şarkı söyleyemezsiniz gelmeden",
-    "önce eve ayrıldıktan sonra gelebilir herkes 1 5 feryat vardır tavan üzerinde duvar ne istersen gel ve iş dolar hayvanlar oyun kedi köpek oyna herkes eğlenceli sad Evet kırmızı mavi",
-    "portakal şimdi daha sonra genellikle köpekler kedi Scratch oynayabilirsiniz şimdi sadece 1 5 günlük ev penceresi gidiyor geliyor görebilirsiniz görmek",
-    "isteyebilirsiniz gönderdim şeker her zaman sarı iyi seviyor ben bu senin için değil inanıyorum herkes Evet olabilir istiyor",
-  ],
-  // THIRD PAGE
-  title3: "Lütfen saat doldurun",
-  subtitle3: "5:15",
-  // FOURTH PAGE
-  title4: "Lütfen aşağıdaki paragrafı okuyun",
-  list4: [
-    "Kedi adam yukarıda aşağı aşağı aşağı aşağı gitti ve biz aşağıda sol dolar yukarıda gerçek bir köpek. Ne zaman o kırmızı yeşil güneş ötesinde okul",
-    "Pazartesi Çarşamba dolar para birimi genellikle her ülke Bahçe ormana ben inanıyorum ama bu okuma olmadan kırmızı yeşil sonra gitmek yazmak şarkı söyleyemezsiniz gelmeden",
-    "önce eve ayrıldıktan sonra gelebilir herkes 1 5 feryat vardır tavan üzerinde duvar ne istersen gel ve iş dolar hayvanlar oyun kedi köpek oyna herkes eğlenceli sad Evet kırmızı mavi",
-    "portakal şimdi daha sonra genellikle köpekler kedi Scratch oynayabilirsiniz şimdi sadece 1 5 günlük ev penceresi gidiyor geliyor görebilirsiniz görmek",
-    "isteyebilirsiniz gönderdim şeker her zaman sarı iyi seviyor ben bu senin için değil inanıyorum herkes Evet olabilir istiyor",
-  ],
-  color4: "78E2F9",
-  // FIFTH PAGE
-  title5: "Lütfen bir aile üyesi çizin",
-  subtitle5: "Anne baba kız kardeş ya da kardeş",
-  // SIXTH PAGE
-  title6: "Lütfen aşağıdaki paragrafı okuyun",
-  content6: false,
-  list6: [
-    "Kedi adam yukarıda aşağı aşağı aşağı aşağı gitti ve biz aşağıda sol dolar yukarıda gerçek bir köpek. Ne zaman o kırmızı yeşil güneş ötesinde okul",
-    "Pazartesi Çarşamba dolar para birimi genellikle her ülke Bahçe ormana ben inanıyorum ama bu okuma olmadan kırmızı yeşil sonra gitmek yazmak şarkı söyleyemezsiniz gelmeden",
-    "önce eve ayrıldıktan sonra gelebilir herkes 1 5 feryat vardır tavan üzerinde duvar ne istersen gel ve iş dolar hayvanlar oyun kedi köpek oyna herkes eğlenceli sad Evet kırmızı mavi",
-    "portakal şimdi daha sonra genellikle köpekler kedi Scratch oynayabilirsiniz şimdi sadece 1 5 günlük ev penceresi gidiyor geliyor görebilirsiniz görmek",
-    "isteyebilirsiniz gönderdim şeker her zaman sarı iyi seviyor ben bu senin için değil inanıyorum herkes Evet olabilir istiyor",
-  ],
-  color6: "#6FFB71",
-  // SEVENTH PAGE
-  title7: "",
-  content7: false,
-  list7: [
-    "Kedi adam yukarıda aşağı aşağı aşağı aşağı gitti ve biz aşağıda sol dolar yukarıda gerçek bir köpek. Ne zaman o kırmızı yeşil güneş ötesinde okul",
-    "Pazartesi Çarşamba dolar para birimi genellikle her ülke Bahçe ormana ben inanıyorum ama bu okuma olmadan kırmızı yeşil sonra gitmek yazmak şarkı söyleyemezsiniz gelmeden",
-    "önce eve ayrıldıktan sonra gelebilir herkes 1 5 feryat vardır tavan üzerinde duvar ne istersen gel ve iş dolar hayvanlar oyun kedi köpek oyna herkes eğlenceli sad Evet kırmızı mavi",
-    "portakal şimdi daha sonra genellikle köpekler kedi Scratch oynayabilirsiniz şimdi sadece 1 5 günlük ev penceresi gidiyor geliyor görebilirsiniz görmek",
-    "isteyebilirsiniz gönderdim şeker her zaman sarı iyi seviyor ben bu senin için değil inanıyorum herkes Evet olabilir istiyor",
-  ],
-  color7: "#F25252",
+const turkish = {
+  languaje: "Türkçe",
+  // ========================
+  loginTitle: "Giriş",
+  loginUser: "Kullanıcı",
+  loginPassword: "Şifre",
+  loginNext: "Sonraki",
+  // ========================
+  formName: "İsim",
+  formAge: "Yaş",
+  formDateOfBirth: "Doğum tarihi",
+  formNationality: "Uyruk",
+  formBloodType: "Kan Grubu",
+  formFemale: "Kadın",
+  formMale: "Erkek",
+  // ========================
+  timeTitle: "Soru başına dakika",
+  timeMinutesLabel: "Dakika",
+  // ========================
+  recordPopupLabel: "Kayda başlamak istiyor musunuz?",
+  recordPopupCancelLabel: "İptal",
+  recordPopupStartLabel: "Başla",
+  // ========================
+  firstQuestionTitle: "Lütfen aşağıdaki cümleleri kopyalayın",
+  firstQuestionSubtitle: "The cat is a real bird",
+  // ========================
+  secondQuestionTitle: "Lütfen aşağıdaki paragrafı okuyun",
+  secondQuestionOption1: "Kuş kedinin aşağısında oynuyor",
+  secondQuestionOption2:
+    "Köpek değil ağaç yeşil gökyüzünde ve hepimiz kedi tek kuş yeşil sari bir bugün yarın",
+  secondQuestionOption3:
+    "Bugünden sonra hepimiz gittiğimizde geldiğimizde doğru değil",
+  secondQuestionOption4: "Bu benim üçümü her gün gelip izler git gel",
+  // ========================
+  thirdQuestionTitle: "Lütfen zamanı çizin",
+  thirdQuestionSubtitle: "5:15",
+  // ========================
+  fourthQuestionTitle: "Lütfen aşağıdaki paragrafı okuyun",
+  fourthQuestionOption1: "Kuş kedinin aşağısında oynuyor",
+  fourthQuestionOption2:
+    "Köpek değil ağaç yeşil gökyüzünde ve hepimiz kedi tek kuş yeşil sari bir bugün yarın",
+  fourthQuestionOption3:
+    "Bugünden sonra hepimiz gittiğimizde geldiğimizde doğru değil",
+  fourthQuestionOption4: "Bu benim üçümü her gün gelip izler git gel",
+  // ========================
+  fifthQuestionTitle: "Lütfen bir aile üyenizi çizin",
+  fifthQuestionSubtitle: "PBaba, anne, kız kardeş ve erkek kardeş",
+  // ========================
+  sixthQuestionTitle: "Lütfen aşağıdaki paragrafı okuyun",
+  sixthQuestionText:
+    "Kedi gerçek bir köpek yukarı aşağı aşağı aşağı yukarı dolar adam aşağıya gider içten dışa ve biz aşağıda bıraktık. ne zaman gidebilir kırmızı yeşil güneşin ötesine gel evden çıktıktan sonra okuldan önce pazartesi çarşamba dolar para birimi sık sık gidebilir her ülkeye gel bahçe orman inanıyorum ama söyleyemem yaz kırmızı yeşilin peşinden git bu okumadan herkesin bir beşi var duvarın üstünde tevan ne görmek istersen git gel ve oyna iş dolar hayvanlar oyna kedi köpek git oyna hrcocuk eğlen üzgün evet kırmızı mavi turuncu şimdi daha sonra sık sık köpekler oynar kediler tırmalar şimdi sadece bir tane görebilirsin beş her gün eve geliyordu pencereye gidiyordu herkes şekeri sever ne zaman sarı iyi inanıyorum bu senin için değil benim için herkesin istediği var olabilir evet",
+  // ========================
+  seventhQuestionTitle: "Lütfen aşağıdaki paragrafı okuyun",
+  seventhQuestionText:
+    "Kedi gerçek bir köpek yukarı aşağı aşağı aşağı yukarı dolar adam aşağıya gider içten dışa ve biz aşağıda bıraktık. ne zaman gidebilir kırmızı yeşil güneşin ötesine gel evden çıktıktan sonra okuldan önce pazartesi çarşamba dolar para birimi sık sık gidebilir her ülkeye gel bahçe orman inanıyorum ama söyleyemem yaz kırmızı yeşilin peşinden git bu okumadan herkesin bir beşi var duvarın üstünde tevan ne görmek istersen git gel ve oyna iş dolar hayvanlar oyna kedi köpek git oyna hrcocuk eğlen üzgün evet kırmızı mavi turuncu şimdi daha sonra sık sık köpekler oynar kediler tırmalar şimdi sadece bir tane görebilirsin beş her gün eve geliyordu pencereye gidiyordu herkes şekeri sever ne zaman sarı iyi inanıyorum bu senin için değil benim için herkesin istediği var olabilir evet",
+  // ========================
+  audioFirstQuestion: "fire.mp3",
+  audioSecondQuestion: "fire.mp3",
+  audioThridQuestion: "fire.mp3",
+  audioFourthQuestion: "fire.mp3",
+  audioFifthQuestion: "fire.mp3",
+  audioSixthQuestion: "fire.mp3",
+  audioSeventhQuestion: "fire.mp3",
 };
+
+module.exports = turkish;
