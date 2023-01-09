@@ -1,0 +1,12 @@
+version: "3.9"
+services:
+  dyslexia-app-backend:
+    build: .
+    ports:
+      - "62345:62345"
+    links:
+      - mongodb
+  mongodb:
+    image: mongo
+    ports:
+      - "27017:27017"

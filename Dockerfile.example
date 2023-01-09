@@ -1,0 +1,10 @@
+FROM node:14-alpine
+RUN mkdir -p /home/dyslexia-app-backend
+COPY . /home/dyslexia-app-backend
+ENV EMAIL_USER=
+ENV EMAIL_PASSWORD=
+ENV EMAIL_DESTINY=
+ENV JWT_SECRET=
+ENV MONGODB_URI=
+EXPOSE 62345
+CMD ["node", "/home/dyslexia-app-backend/src/index.js"]

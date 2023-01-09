@@ -1,4 +1,3 @@
-// mongodb://username:password@host:port/database?options...
 const mongoose = require("mongoose");
 const ClientModel = require("../models/client");
 const AdminModel = require("../models/admin");
