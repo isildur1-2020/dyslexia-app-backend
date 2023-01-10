@@ -8,5 +8,9 @@ services:
       - mongodb
   mongodb:
     image: mongo
+    volumes:
+      - mongo-data:/data/db
     ports:
-      - "27017:27017"
+      - "62344:27017"
+volumes:
+  mongo-data:
