@@ -13,7 +13,7 @@ const { publicPath } = require("./utils/paths");
 // MIDDLEWARES
 app.use(express.json());
 app.use(cors());
-app.use(morgan("combined"));
+app.use(morgan("tiny"));
 app.use(express.urlencoded({ extended: true }));
 app.use("/api/static", express.static(publicPath));
 
