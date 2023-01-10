@@ -35,7 +35,7 @@ const sendEmail = (req, res) => {
         message: "Email error",
       });
     } else {
-      console.log("Email sent");
+      console.log("Email sent to", process.env.EMAIL_DESTINY);
       res.status(200).json({
         err: null,
         message: info,
