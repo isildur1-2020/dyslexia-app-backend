@@ -3,7 +3,7 @@ const path = require("path");
 
 const audiosOptions = () =>
   new Promise((resolve, reject) => {
-    const audiosPath = path.join(process.cwd(), "public/audios");
+    const audiosPath = path.join(process.cwd(), "/src/public/audios");
     fs.readdir(audiosPath, (err, files) => {
       if (err) reject(err);
       resolve(files);
