@@ -6,6 +6,7 @@ const portuguese = require("./portuguese");
 const spanish = require("./spanish");
 const russian = require("./russian");
 const turkish = require("./turkish");
+const english = require("./english");
 
 const languajes = [
   german,
@@ -16,6 +17,7 @@ const languajes = [
   spanish,
   russian,
   turkish,
+  english,
 ];
 
 module.exports = languajes;
